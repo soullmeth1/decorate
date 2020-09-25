@@ -1,0 +1,118 @@
+@import "./mixin";
+
+.home__scroll {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  scroll-snap-align: center;
+}
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1680px;
+    margin: 0 auto;
+    @include respond(phone) {
+      width: 90%;
+    }
+    &::after {
+      content: "";
+      display: block;
+      background-image: linear-gradient(
+          135deg,
+          rgba(219, 255, 250, 0.712),
+          transparent
+        ),
+        url("../images/ph.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      //   background-attachment: fixed;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 40%;
+      z-index: -1;
+    }
+  }
+  &__caption {
+    // flex: 0.5;
+    max-width: 380px;
+    overflow-x: hidden;
+    .caption {
+      display: flex;
+      transition: all 0.5s ease;
+      > div {
+        min-width: 100%;
+        padding: 20px 5px;
+        box-sizing: border-box;
+      }
+    }
+    h1 {
+      font-size: 5em;
+      color: var(--color-prime);
+      @include respond(phone) {
+        font-size: 3em;
+      }
+    }
+    p {
+      color: gray;
+      margin: 30px 0;
+      @include respond(phone) {
+        margin: 10px 0;
+      }
+    }
+    button {
+      border: none;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      color: var(--color-prime);
+      background-color: transparent;
+      .MuiSvgIcon-root {
+        margin-right: 10px;
+      }
+    }
+    img {
+      max-height: 200px;
+      margin-top: 20px;
+      box-shadow: 1px 40px 40px -40px rgba(128, 128, 128, 0.527);
+      border-radius: 10px;
+      max-width: 100%;
+    }
+  }
+  &__img {
+    flex: 0.5;
+    background-image: url("../images/ph.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 40%;
+    z-index: -1;
+  }
+  &__nav {
+    padding: 20px;
+    text-align: center;
+    .MuiSvgIcon-root {
+      font-size: 2em;
+    }
+  }
+}

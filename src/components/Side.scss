@@ -1,0 +1,36 @@
+@import "./mixin";
+
+.side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  writing-mode: tb;
+  transform: rotate(180deg);
+  padding: 20px 10px;
+  box-sizing: border-box;
+  color: gray;
+  box-shadow: 0px 1px 10px -7px gray;
+  @include respond(phone) {
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  &__nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    li {
+      a {
+        padding: 10px 5px;
+        color: inherit;
+        text-decoration: none;
+        display: block;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  > .MuiSvgIcon-root {
+    transform: rotate(-180deg);
+  }
+}
