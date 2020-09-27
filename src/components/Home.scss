@@ -6,6 +6,17 @@
   position: relative;
   min-height: 100%;
   scroll-snap-align: center;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: var(--color-prime);
+    @include respond(phone) {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .home {

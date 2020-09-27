@@ -5,6 +5,7 @@ import pl from "../images/pl.jpg";
 import pl1 from "../images/pl1.jpg";
 import pl2 from "../images/pl2.jpg";
 import pl3 from "../images/pl3.jpg";
+import Cards from "./Cards";
 // import ph from "../images/ph.jpg";
 
 function Home() {
@@ -83,7 +84,8 @@ function Home() {
       </section>
 
       <section className="home__scroll">
-        <h1>heyy</h1>
+        <h1>Our Services</h1>
+        <Cards />
       </section>
     </div>
   );

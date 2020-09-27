@@ -1,0 +1,32 @@
+@import "./mixin";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 0.5;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.342);
+  @include respond(phone) {
+    padding: 10px;
+    margin: 5px !important;
+  }
+  > .MuiSvgIcon-root {
+    font-size: 5em;
+    color: gray;
+    margin-bottom: 20px;
+    @include respond(phone) {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    color: gray;
+    text-align: justify;
+    @include respond(phone) {
+      font-size: 0.8em;
+    }
+  }
+}
