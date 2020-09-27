@@ -1,9 +1,9 @@
 import React from "react";
 import "./Galleries.scss";
-import gl from "../images/gl.jpg";
-import gl1 from "../images/gl1.jpg";
-import gl2 from "../images/gl2.jpg";
-import gl3 from "../images/gl3.jpg";
+import gl from "../images/gl.webp";
+import gl1 from "../images/gl1.webp";
+import gl2 from "../images/gl2.webp";
+import gl3 from "../images/gl3.webp";
 
 function Galleries() {
   return (

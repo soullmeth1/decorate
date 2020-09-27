@@ -1,10 +1,10 @@
 import { ArrowForward, ArrowLeft, ArrowRight } from "@material-ui/icons";
 import React, { useEffect, useRef, useState } from "react";
 import "./Home.scss";
-import pl from "../images/pl.jpg";
-import pl1 from "../images/pl1.jpg";
-import pl2 from "../images/pl2.jpg";
-import pl3 from "../images/pl3.jpg";
+import pl from "../images/pl.webp";
+import pl1 from "../images/pl1.webp";
+import pl2 from "../images/pl2.webp";
+import pl3 from "../images/pl3.webp";
 import Cards from "./Cards";
 import Galleries from "./Galleries";
 // import ph from "../images/ph.jpg";
