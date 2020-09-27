@@ -1,0 +1,22 @@
+@import "./mixin";
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 80%;
+  max-width: 1080px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px -10px gray;
+  align-items: stretch;
+  @include respond(phone) {
+    display: flex;
+    overflow-x: scroll;
+  }
+  > img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
