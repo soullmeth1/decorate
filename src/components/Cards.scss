@@ -2,14 +2,12 @@
 
 .cards {
   display: flex;
-  //   align-items: center;
   justify-content: space-between;
   width: 90%;
   max-width: 1080px;
-  //   margin: 50px 0;
   @include respond(phone) {
-    flex-wrap: wrap;
-    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   > :not(:last-child) {
     margin-right: 20px;
